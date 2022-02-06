@@ -7,6 +7,7 @@ function Detail() {
   const [loading, setLoading] = useState(true);
   const [movie, setMovie] = useState([]);
   //console.log(id);
+  /*
   const getMovie = useCallback(async () => {
     const json = await (
       await fetch(`https://yts.mx/api/v2/movie_details.json?movie_id=${id}`)
@@ -17,6 +18,17 @@ function Detail() {
   useEffect(() => {
     getMovie();
   }, [getMovie]);
+  */
+  const getMovie = async () => {
+    const json = await (
+      await fetch(`https://yts.mx/api/v2/movie_details.json?movie_id=${id}`)
+    ).json();
+    setMovie(json.data.movie);
+    setLoading(false);
+  };
+  useEffect(() => {
+    getMovie();
+  }, []);
   return (
     <div>
       <Link to="/">Home</Link>
