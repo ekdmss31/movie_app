@@ -1,5 +1,7 @@
-import { useParams, Link } from "react-router-dom";
-import { useState, useEffect, useCallback } from "react";
+import { useParams } from "react-router-dom";
+import { useState, useEffect } from "react";
+import Point from "../components/Point";
+import styles from "./Home.module.css";
 
 function Detail() {
   //const x = useParams();
@@ -30,20 +32,22 @@ function Detail() {
     getMovie();
   }, []);
   return (
-    <div>
-      <Link to="/">Home</Link>
+    <div className={styles.container}>
       {loading ? (
-        <h1>Loading...</h1>
+        <div className={styles.loader}>
+          <span>Loading...</span>
+        </div>
       ) : (
         <div>
-          <img src={movie.medium_cover_image} alt={movie.title_long} />
-          <h2>{movie.title_long}</h2>
-          <ul>
-            {movie.genres &&
-              movie.genres.map((genre) => <li key={movie.genre}>{genre}</li>)}
-          </ul>
-          <p>평점 : {movie.rating}</p>
-          <p>{movie.description_full}</p>
+          <Point
+            bg_img={movie.background_image_original}
+            medium_cover_image={movie.medium_cover_image}
+            title_long={movie.title_long}
+            genres={movie.genres}
+            rating={movie.rating}
+            runtime={movie.runtime}
+            description_full={movie.description_full}
+          />
         </div>
       )}
     </div>

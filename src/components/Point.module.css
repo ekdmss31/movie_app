@@ -1,0 +1,58 @@
+.movie__bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  filter: brightness(50%);
+}
+.movie__home {
+  position: absolute;
+  top: 10px;
+  display: flex;
+}
+.movie__home a {
+  text-decoration: none;
+  color: grey;
+  font-size: 20px;
+}
+.movie__show {
+  position: absolute;
+  top: 20%;
+  left: 15%;
+  z-index: 100;
+  display: flex;
+}
+
+.movie__textbox {
+  /*padding: 0 15% 10% 10%;*/
+  padding: 0 15% 0 10%;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+}
+.movie__title {
+  font-weight: bold;
+  font-size: 30px;
+}
+.movie__textbox > ul {
+  padding: 0 0 0 20px;
+  font-size: 17px;
+  list-style: none;
+}
+.movie__textbox li {
+  padding-bottom: 10px;
+}
+.movie__textbox p {
+  color: whitesmoke;
+}
+
+@media screen and (max-width: 1090px) {
+  /*반응형 웹페이지 만들기*/
+  .movie__img {
+    height: 100%;
+    padding-top: 35px;
+  }
+}
