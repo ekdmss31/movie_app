@@ -2,10 +2,14 @@ import { useEffect, useState } from "react";
 import Movie from "../components/Movie";
 import styles from "./Home.module.css";
 import { Link } from "react-router-dom";
+//import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 
 function Home() {
+  //const { num } = useParams();
+  //const [nums, setNums] = useState([...Array(10)].map((_, i) => i + +num)); //10번 반복하는데, index(i)를 이용하여 1부터 10까지 들어가도록.
   const [loading, setLoading] = useState(true);
   const [movies, setMovies] = useState([]);
+  //const [reloading, setReloading] = useState(false);
   const getMovies = async () => {
     const json = await (
       await fetch(
@@ -19,7 +23,15 @@ function Home() {
   useEffect(() => {
     getMovies();
   }, []);
-  console.log(movies);
+  /*
+  useEffect(() => {
+    setReloading(false);
+    setLoading(true);
+    getMovies();
+  }, [reloading]);
+  */
+  //useEffect(() => {}, [nums]); //nums이 불릴 때 한번만 실행
+
   return (
     <div className={styles.container}>
       {loading ? (
@@ -30,9 +42,8 @@ function Home() {
         <div className={styles.movies}>
           {movies &&
             movies.map((movie) => (
-              <Link to={`/movie/${movie.id}`}>
+              <Link key={movie.id} to={`/movie/${movie.id}`}>
                 <Movie
-                  key={movie.id}
                   id={movie.id}
                   coverImg={movie.medium_cover_image}
                   title={movie.title}
@@ -44,6 +55,17 @@ function Home() {
             ))}
         </div>
       )}
+
+      {/* <div>
+        {nums.map((num) => {
+          console.log(num);
+          return (
+            <Link to={`/page/${num}`} onClick={() => setReloading(true)}>
+              {num}
+            </Link>
+          );
+        })}
+      </div> */}
     </div>
   );
 }

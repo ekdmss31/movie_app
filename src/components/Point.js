@@ -1,6 +1,6 @@
 import styles from "./Point.module.css";
-import { Link } from "react-router-dom";
 function Point({
+  id,
   bg_img,
   medium_cover_image,
   title_long,
@@ -28,7 +28,9 @@ function Point({
             <li>runtime : {runtime}</li>
             <li>
               Genre
-              <ul>{genres && genres.map((genre) => <li>{genre}</li>)}</ul>
+              <ul>
+                {genres && genres.map((genre) => <li key={genre}>{genre}</li>)}
+              </ul>
             </li>
             <li>{description_full}</li>
           </ul>

@@ -40,6 +40,7 @@ function Detail() {
       ) : (
         <div>
           <Point
+            key={movie.id}
             bg_img={movie.background_image_original}
             medium_cover_image={movie.medium_cover_image}
             title_long={movie.title_long}

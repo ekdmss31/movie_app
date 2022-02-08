@@ -6,19 +6,19 @@ function Nav() {
       <nav className={styles.container}>
         <div className={styles.title}>
           <Link to="/react-movie">
-            <i class="fab fa-dochub"></i>
+            <i className="fab fa-dochub"></i>
             <strong>EFLEX</strong>
           </Link>
         </div>
         <ul className={styles.icon__list}>
           <li>
             <a href="https://twitter.com/?lang=ko" target="_blank">
-              <i class="fab fa-twitter-square"></i>
+              <i className="fab fa-twitter-square"></i>
             </a>
           </li>
           <li>
             <a href="https://www.instagram.com/" target="_blank">
-              <i class="fab fa-instagram"></i>
+              <i className="fab fa-instagram"></i>
             </a>
           </li>
         </ul>

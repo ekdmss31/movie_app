@@ -7,6 +7,9 @@ function App() {
     <Router basename={process.env.PUBLIC_URL}>
       <Nav />
       <Switch>
+        {/* <Route path="/page/:num">
+          <Foot />
+        </Route> */}
         <Route path="/movie/:id">
           <Detail />
         </Route>
