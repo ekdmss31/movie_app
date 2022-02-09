@@ -12,6 +12,15 @@
   color: inherit;
   box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
     0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
+  transition: all 0.4s ease;
+}
+.movie > * {
+  color: #4b4453;
+}
+.movie:hover {
+  transform: translateY(-10px);
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 .movie__img {
   position: relative;
@@ -21,6 +30,7 @@
   margin-right: 30px;
   box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
     0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
+  transition: all 0.4s ease;
 }
 .movie__title,
 .movie__year {
@@ -28,7 +38,9 @@
   text-decoration: none;
   margin: 0;
 }
-
+.movie__title:hover {
+  text-decoration: underline;
+}
 .movie__genres {
   list-style: none;
   padding: 0;

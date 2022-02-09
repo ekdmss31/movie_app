@@ -12,9 +12,9 @@ function Point({
   return (
     <div>
       <img className={styles.movie__bg} src={bg_img} />
-      <div className={styles.movie__home}>
+      {/* <div className={styles.movie__home}>
         <Link to="/">Home</Link>
-      </div>
+      </div> */}
       <div className={styles.movie__show}>
         <img
           className={styles.movie__img}

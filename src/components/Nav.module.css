@@ -1,0 +1,46 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 64px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+.container a {
+  text-decoration: none;
+}
+.container ul {
+  padding: 0;
+  list-style: none;
+}
+.title {
+  display: flex;
+  align-items: center;
+}
+.title i {
+  font-size: 32px;
+  color: red;
+  margin: 0 8px 0 0;
+}
+.title strong {
+  font-size: 32px;
+  color: red;
+  letter-spacing: 0.5px;
+}
+.icon__list {
+  display: flex;
+}
+.icon__list li {
+  font-size: 24px;
+  padding: 4px 8px;
+}
+.icon__list li a {
+  color: red;
+  text-decoration: none;
+}
+.null {
+  width: 100%;
+  height: 100px;
+}
