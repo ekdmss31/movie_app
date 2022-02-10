@@ -6,7 +6,7 @@
   min-height: 100%;
   filter: brightness(50%);
 }
-.movie__home {
+/* .movie__home {
   position: absolute;
   top: 10px;
   display: flex;
@@ -15,7 +15,7 @@
   text-decoration: none;
   color: grey;
   font-size: 20px;
-}
+} */
 .movie__show {
   position: absolute;
   top: 20%;
